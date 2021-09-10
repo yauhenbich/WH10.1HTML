@@ -1,0 +1,10 @@
+type: marketplace
+title: Flask Skypro
+language: Russian
+summary: Привет! Это практические задания курса "Знакомство с Flask" 10 урока
+vendor:
+  name: Gleb Homutov
+programming_language: Python
+environment: unittest
+content:
+- part1
