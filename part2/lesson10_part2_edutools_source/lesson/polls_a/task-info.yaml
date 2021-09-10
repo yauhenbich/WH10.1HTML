@@ -1,0 +1,14 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: На details.html
+  is_correct: true
+- text: На страницу "Результаты"
+  is_correct: false
+- text: На изображение с результатами results.jpg
+  is_correct: false
+message_correct: Верно
+message_incorrect: Неверно
+files:
+- name: __init__.py
+  visible: true

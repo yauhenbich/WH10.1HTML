@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: request.form.age
+  is_correct: false
+- text: request.form[‘age’]
+  is_correct: true
+- text: request.args[‘age’]
+  is_correct: false
+- text: request.args.age
+  is_correct: false
+message_correct: Верно
+message_incorrect: Неверно
+files:
+- name: __init__.py
+  visible: true
+- name: form.html
+  visible: true

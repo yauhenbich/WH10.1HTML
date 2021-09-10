@@ -1,0 +1,16 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: b
+  is_correct: false
+- text: p
+  is_correct: false
+- text: i
+  is_correct: false
+- text: a
+  is_correct: false
+message_correct: Верно
+message_incorrect: Неверно
+files:
+- name: __init__.py
+  visible: true

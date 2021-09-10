@@ -1,0 +1,16 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: button
+  is_correct: false
+- text: form
+  is_correct: false
+- text: submit
+  is_correct: false
+- text: input
+  is_correct: true
+message_correct: Верно
+message_incorrect: Неверно
+files:
+- name: __init__.py
+  visible: true

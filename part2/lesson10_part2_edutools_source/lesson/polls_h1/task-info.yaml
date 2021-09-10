@@ -1,0 +1,22 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: head
+  is_correct: false
+- text: header
+  is_correct: false
+- text: h1
+  is_correct: true
+- text: h2
+  is_correct: false
+- text: h3
+  is_correct: false
+- text: title
+  is_correct: false
+message_correct: Верно
+message_incorrect: Неверно
+files:
+- name: __init__.py
+  visible: true
+- name: polls.html
+  visible: true

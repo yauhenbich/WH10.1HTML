@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: Может быть не задано
+  is_correct: true
+- text: post
+  is_correct: false
+- text: get
+  is_correct: true
+- text: POST
+  is_correct: false
+- text: GET
+  is_correct: true
+message_correct: Верно
+message_incorrect: Неверно
+files:
+- name: __init__.py
+  visible: true

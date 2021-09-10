@@ -1,0 +1,34 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: h1
+  is_correct: false
+- text: img
+  is_correct: true
+- text: input
+  is_correct: false
+- text: h3
+  is_correct: true
+- text: p
+  is_correct: true
+- text: ol
+  is_correct: false
+- text: a
+  is_correct: true
+- text: form
+  is_correct: false
+- text: i
+  is_correct: true
+- text: ul
+  is_correct: false
+- text: b
+  is_correct: true
+message_correct: Верно
+message_incorrect: Неверно
+files:
+- name: __init__.py
+  visible: true
+- name: text.html
+  visible: true
+- name: image1.png
+  visible: true
