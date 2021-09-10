@@ -3,7 +3,7 @@
   "summary" : "Привет! Это практические задания курса \"Знакомство с Flask\" 10 урока",
   "title" : "Flask Skypro. Урок 10. Часть 2",
   "authors" : [
-    "Денис Никаноров"
+    "Sky.pro"
   ],
   "programming_language" : "Python",
   "language" : "ru",
@@ -531,6 +531,12 @@
     },
     {
       "name" : "lesson/requirements.txt",
+      "placeholders" : [ ],
+      "is_visible" : true,
+      "text" : "flask\nbeautifulsoup4\nhtml5lib"
+    },
+    {
+      "name" : "requirements.txt",
       "placeholders" : [ ],
       "is_visible" : true,
       "text" : "flask\nbeautifulsoup4\nhtml5lib"
