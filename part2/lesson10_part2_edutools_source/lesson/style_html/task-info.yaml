@@ -23,7 +23,7 @@ options:
   is_correct: false
 - text: b
   is_correct: true
-message_correct: Верно
+message_correct: Верно! Ваш код для платформы 381251
 message_incorrect: Неверно
 files:
 - name: __init__.py

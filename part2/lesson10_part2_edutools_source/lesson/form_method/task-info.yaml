@@ -11,7 +11,7 @@ options:
   is_correct: false
 - text: GET
   is_correct: true
-message_correct: Верно
+message_correct: Верно! Ваш код для платформы 340810
 message_incorrect: Неверно
 files:
 - name: __init__.py

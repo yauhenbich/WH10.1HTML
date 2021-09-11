@@ -9,7 +9,7 @@ options:
   is_correct: false
 - text: a
   is_correct: false
-message_correct: Верно
+message_correct: Верно! Ваш код для платформы 987935
 message_incorrect: Неверно
 files:
 - name: __init__.py

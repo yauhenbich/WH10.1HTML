@@ -7,7 +7,7 @@ options:
   is_correct: false
 - text: На изображение с результатами results.jpg
   is_correct: false
-message_correct: Верно
+message_correct: Верно! Ваш код для платформы 767736
 message_incorrect: Неверно
 files:
 - name: __init__.py

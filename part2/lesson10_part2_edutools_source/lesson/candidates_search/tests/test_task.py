@@ -4,6 +4,10 @@ from bs4 import BeautifulSoup
 
 
 class TestCase(SkyproTestCase):
+
+    def get_key(self):
+        return "322711"
+
     def test_form(self):
         with app.test_client() as client:
             get_resp = client.get('/')

@@ -4,6 +4,10 @@ from lesson.utils import SkyproTestCase
 
 
 class TestCase(SkyproTestCase):
+
+    def get_key(self):
+        return "375064"
+
     def test_wiki(self):
         with open('wiki.html', 'r') as fh:
             soup = BeautifulSoup(fh.read(), 'html5lib')

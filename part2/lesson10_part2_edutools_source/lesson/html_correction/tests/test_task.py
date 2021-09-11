@@ -2,6 +2,8 @@ from lesson.utils import SkyproTestCase
 
 from bs4 import BeautifulSoup
 
+def get_key(self):
+    return "155598"
 
 class TestCase(SkyproTestCase):
     def test_form(self):
