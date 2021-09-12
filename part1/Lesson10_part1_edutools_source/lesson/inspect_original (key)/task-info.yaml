@@ -1,0 +1,12 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: Приложение изучено
+  is_correct: true
+files:
+- name: app.py
+  visible: true
+- name: __init__.py
+  visible: false
+message_correct: Верно! Ваш код для платформы 978557
+message_incorrect: Неверно

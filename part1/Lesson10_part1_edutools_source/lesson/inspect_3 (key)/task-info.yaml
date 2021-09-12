@@ -1,0 +1,22 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: http://127.0.0.1:5000/Python/Master/
+  is_correct: false
+- text: http://127.0.0.1:5000/hello/Python/Master/
+  is_correct: true
+- text: http://127.0.0.1:5000/Master/Python/
+  is_correct: false
+- text: http://127.0.0.1:5000/hello/Master/Python/
+  is_correct: false
+- text: http://127.0.0.1:5000/Python Master/
+  is_correct: false
+- text: http://127.0.0.1:5000/hello/Python Master/
+  is_correct: true
+message_correct: Верно! Ваш код для платформы 455191
+message_incorrect: Неверно
+files:
+- name: __init__.py
+  visible: true
+- name: app.py
+  visible: true

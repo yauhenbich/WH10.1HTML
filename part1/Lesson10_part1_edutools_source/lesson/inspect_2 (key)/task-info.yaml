@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: Hello Denis None!
+  is_correct: false
+- text: Not found
+  is_correct: false
+- text: Hello None Denis!
+  is_correct: false
+- text: Hello Denis!
+  is_correct: true
+message_correct: Верно! Ваш код для платформы 827342
+message_incorrect: Неверно
+files:
+- name: __init__.py
+  visible: true
+- name: app.py
+  visible: true

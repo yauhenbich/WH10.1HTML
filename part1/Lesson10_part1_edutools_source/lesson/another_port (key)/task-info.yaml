@@ -1,0 +1,20 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: flask run --host=0.0.0.0
+  is_correct: false
+- text: flask run
+  is_correct: false
+- text: flask run -h 0.0.0.0:8000
+  is_correct: false
+- text: flask run -p 8000
+  is_correct: true
+- text: flask run --host=127.0.0.1:8000
+  is_correct: false
+- text: flask run --port=8000
+  is_correct: true
+message_correct: Верно! Ваш код для тренажера 359500
+message_incorrect: Неверно
+files:
+- name: __init__.py
+  visible: true

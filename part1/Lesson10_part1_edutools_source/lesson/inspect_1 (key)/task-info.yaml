@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: Hello Anonymous!
+  is_correct: false
+- text: Not found
+  is_correct: true
+- text: Hello None!
+  is_correct: false
+- text: Hello None None!
+  is_correct: false
+message_correct: Верно! Ваш код для платформы 703103
+message_incorrect: Incorrect solution
+files:
+- name: __init__.py
+  visible: true
+- name: app.py
+  visible: true
