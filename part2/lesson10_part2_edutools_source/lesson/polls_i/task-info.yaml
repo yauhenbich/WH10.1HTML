@@ -6,7 +6,7 @@ options:
 - text: p
   is_correct: false
 - text: i
-  is_correct: false
+  is_correct: true
 - text: a
   is_correct: false
 message_correct: Верно! Ваш код для платформы 987935
