@@ -7,7 +7,6 @@ content:
 - style_html
 - form_input_value
 - form_method
-- candidates_search
 - python_wiki
 - search_form
 - html_correction
