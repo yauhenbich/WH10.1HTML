@@ -1,11 +1,12 @@
-from task import app
+from task import app, load_users
 from lesson.utils import SkyproTestCase
+
+users = load_users()
 
 class TestCase(SkyproTestCase):
 
     def get_key(self):
         return "173645"
-
 
     def test_users(self):
         with app.test_client() as client:

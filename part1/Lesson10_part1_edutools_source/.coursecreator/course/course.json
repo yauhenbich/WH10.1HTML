@@ -10,7 +10,7 @@
   "course_type" : "PyCharm",
   "items" : [
     {
-      "title" : "lesson1",
+      "title" : "lesson",
       "task_list" : [
         {
           "choiceOptions" : [
@@ -20,7 +20,7 @@
             }
           ],
           "isMultipleChoice" : false,
-          "name" : "inspect_original",
+          "name" : "inspect_original (key)",
           "files" : {
             "app.py" : {
               "name" : "app.py",
@@ -62,7 +62,7 @@
             }
           ],
           "isMultipleChoice" : false,
-          "name" : "inspect_1",
+          "name" : "inspect_1 (key)",
           "files" : {
             "__init__.py" : {
               "name" : "__init__.py",
@@ -104,7 +104,7 @@
             }
           ],
           "isMultipleChoice" : false,
-          "name" : "inspect_2",
+          "name" : "inspect_2 (key)",
           "files" : {
             "__init__.py" : {
               "name" : "__init__.py",
@@ -154,7 +154,7 @@
             }
           ],
           "isMultipleChoice" : true,
-          "name" : "inspect_3",
+          "name" : "inspect_3 (key)",
           "files" : {
             "__init__.py" : {
               "name" : "__init__.py",
@@ -177,7 +177,7 @@
           "task_type" : "choice"
         },
         {
-          "name" : "helloworld",
+          "name" : "helloworld (key)",
           "files" : {
             "task.py" : {
               "name" : "task.py",
@@ -189,7 +189,7 @@
               "name" : "tests/test_task.py",
               "placeholders" : [ ],
               "is_visible" : false,
-              "text" : "from task import app\nimport unittest\n\n\nclass TestCase(unittest.TestCase):\n    def test_index(self):\n        with app.test_client() as client:\n            resp = client.get('/')\n            self.assertNotEqual(404, resp.status_code, msg='Представление должно работать по урлу /')\n\n            expected = 'Hello world'\n\n            self.assertEqual(expected, resp.get_data(True), msg=f'Представление должно возвращать {expected}')\n"
+              "text" : "from task import app\nfrom lesson.utils import SkyproTestCase\n\nclass TestCase(SkyproTestCase):\n\n    def get_key(self):\n        return \"599292\"\n\n    def test_index(self):\n        with app.test_client() as client:\n            resp = client.get('/')\n            self.assertNotEqual(404, resp.status_code, msg='Представление должно работать по урлу /')\n\n            expected = 'Hello world'\n\n            self.assertEqual(expected, resp.get_data(True), msg=f'Представление должно возвращать {expected}')\n"
             },
             "__init__.py" : {
               "name" : "__init__.py",
@@ -212,7 +212,7 @@
           "task_type" : "edu"
         },
         {
-          "name" : "simple_multiroutes",
+          "name" : "simple_multiroutes (key)",
           "files" : {
             "__init__.py" : {
               "name" : "__init__.py",
@@ -224,7 +224,7 @@
               "name" : "tests/test_task.py",
               "placeholders" : [ ],
               "is_visible" : false,
-              "text" : "from task import app\nimport unittest\n\nclass TestCase(unittest.TestCase):\n    def test_sort(self):\n        with app.test_client() as client:\n\n            #  проверка статуса\n\n            path = '/'\n            resp = client.get(path)\n            self.assertEqual(200, resp.status_code, msg=f'Приложение не обрабатывает запрос к {path}')\n\n            path = '/employees/'\n            resp = client.get(path)\n            self.assertEqual(200, resp.status_code, msg=f'Приложение не обрабатывает запрос к {path}')\n\n            path = '/employees/3/'\n            resp = client.get(path)\n            self.assertEqual(200, resp.status_code, msg=f'Приложение не обрабатывает запрос к {path}')\n\n\n            # ожидание и реальность\n\n            path = '/'\n            expected = 'Тут будет главная'\n            resp = client.get(path)\n            self.assertEqual(expected, resp.get_data(True),\n                             msg=f'Неверный ответ при запросе к {path} должно быть {expected}')\n\n"
+              "text" : "from task import app\nfrom lesson.utils import SkyproTestCase\n\nclass TestCase(SkyproTestCase):\n\n    def get_key(self):\n        return \"231045\"\n\n    def test_sort(self):\n        with app.test_client() as client:\n\n            #  проверка статуса\n\n            path = '/'\n            resp = client.get(path)\n            self.assertEqual(200, resp.status_code, msg=f'Приложение не обрабатывает запрос к {path}')\n\n            path = '/employees/'\n            resp = client.get(path)\n            self.assertEqual(200, resp.status_code, msg=f'Приложение не обрабатывает запрос к {path}')\n\n            path = '/employees/3/'\n            resp = client.get(path)\n            self.assertEqual(200, resp.status_code, msg=f'Приложение не обрабатывает запрос к {path}')\n\n\n            # ожидание и реальность\n\n            path = '/'\n            expected = 'Тут будет главная'\n            resp = client.get(path)\n            self.assertEqual(expected, resp.get_data(True),\n                             msg=f'Неверный ответ при запросе к {path} должно быть {expected}')\n\n"
             },
             "tests/__init__.py" : {
               "name" : "tests/__init__.py",
@@ -247,7 +247,7 @@
           "task_type" : "edu"
         },
         {
-          "name" : "simple_operations",
+          "name" : "simple_operations (key)",
           "files" : {
             "task.py" : {
               "name" : "task.py",
@@ -259,7 +259,7 @@
               "name" : "tests/test_task.py",
               "placeholders" : [ ],
               "is_visible" : false,
-              "text" : "from task import app\nimport unittest\n\nclass TestCase(unittest.TestCase):\n    def test_sort(self):\n        with app.test_client() as client:\n\n            #  проверка статуса\n\n            path = '/all/'\n            resp = client.get(path)\n            self.assertEqual(200, resp.status_code, msg=f'Приложение не обрабатывает запрос к {path}')\n\n            path = '/min/'\n            resp = client.get(path)\n            self.assertEqual(200, resp.status_code, msg=f'Приложение не обрабатывает запрос к {path}')\n\n            path = '/max/'\n            resp = client.get(path)\n            self.assertEqual(200, resp.status_code, msg=f'Приложение не обрабатывает запрос к {path}')\n\n            path = '/avg/'\n            resp = client.get(path)\n            self.assertEqual(200, resp.status_code, msg=f'Приложение не обрабатывает запрос к {path}')\n\n\n            # ожидание и реальность\n\n            path = '/all/'\n            expected = '1240 60 230 20 310'\n            resp = client.get(path)\n            self.assertEqual(expected, resp.get_data(True),\n                             msg=f'Неверный ответ при запросе к {path} должно быть {expected}')\n\n\n            # ожидание и реальность\n\n\n            path = '/max/'\n            expected = '1240'\n            resp = client.get(path)\n            self.assertEqual(expected, resp.get_data(True),\n                             msg=f'Неверный ответ при запросе к {path} должно быть {expected}')\n\n            path = '/min/'\n            expected = '20'\n            resp = client.get(path)\n            self.assertEqual(expected, resp.get_data(True),\n                             msg=f'Неверный ответ при запросе к {path} должно быть {expected}')\n\n\n            path = '/avg/'\n            expected = '372'\n            resp = client.get(path)\n            self.assertEqual(expected, resp.get_data(True),\n                             msg=f'Неверный ответ при запросе к {path} должно быть {expected}')\n"
+              "text" : "from task import app\nfrom lesson.utils import SkyproTestCase\n\nclass TestCase(SkyproTestCase):\n\n    def get_key(self):\n        return \"865549\"\n\n\n    def test_sort(self):\n        with app.test_client() as client:\n\n            #  проверка статуса\n\n            path = '/all/'\n            resp = client.get(path)\n            self.assertEqual(200, resp.status_code, msg=f'Приложение не обрабатывает запрос к {path}')\n\n            path = '/min/'\n            resp = client.get(path)\n            self.assertEqual(200, resp.status_code, msg=f'Приложение не обрабатывает запрос к {path}')\n\n            path = '/max/'\n            resp = client.get(path)\n            self.assertEqual(200, resp.status_code, msg=f'Приложение не обрабатывает запрос к {path}')\n\n            path = '/avg/'\n            resp = client.get(path)\n            self.assertEqual(200, resp.status_code, msg=f'Приложение не обрабатывает запрос к {path}')\n\n\n            # ожидание и реальность\n\n            path = '/all/'\n            expected = '1240 60 230 20 310'\n            resp = client.get(path)\n            self.assertEqual(expected, resp.get_data(True),\n                             msg=f'Неверный ответ при запросе к {path} должно быть {expected}')\n\n\n            # ожидание и реальность\n\n\n            path = '/max/'\n            expected = '1240'\n            resp = client.get(path)\n            self.assertEqual(expected, resp.get_data(True),\n                             msg=f'Неверный ответ при запросе к {path} должно быть {expected}')\n\n            path = '/min/'\n            expected = '20'\n            resp = client.get(path)\n            self.assertEqual(expected, resp.get_data(True),\n                             msg=f'Неверный ответ при запросе к {path} должно быть {expected}')\n\n\n            path = '/avg/'\n            expected = '372'\n            resp = client.get(path)\n            self.assertEqual(expected, resp.get_data(True),\n                             msg=f'Неверный ответ при запросе к {path} должно быть {expected}')\n"
             },
             "__init__.py" : {
               "name" : "__init__.py",
@@ -282,13 +282,13 @@
           "task_type" : "edu"
         },
         {
-          "name" : "simple_query",
+          "name" : "simple_query (key)",
           "files" : {
             "tests/test_task.py" : {
               "name" : "tests/test_task.py",
               "placeholders" : [ ],
               "is_visible" : false,
-              "text" : "from task import app\nimport unittest\n\nclass TestCase(unittest.TestCase):\n    def test_sort(self):\n        with app.test_client() as client:\n\n            #  проверка статуса\n\n            path = '/search/?s=а'\n            expected = '...'\n            resp = client.get(path)\n            self.assertEqual(200, resp.status_code, msg=f'Приложение не обрабатывает запрос к {path}')\n\n\n            # ожидание и реальность\n\n            path = '/search/?s=мос'\n            expected = 'Москва'\n            resp = client.get(path)\n            self.assertEqual(expected, resp.get_data(True),\n                             msg=f'Неверный ответ при запросе к {path} должно быть {expected}')\n\n\n            # ожидание и реальность\n\n            path = '/search/?s=кра'\n            expected = 'Красноярск, Краснодар'\n            resp = client.get(path)\n            self.assertEqual(expected, resp.get_data(True),\n                             msg=f'Неверный ответ при запросе к {path} должно быть {expected}')\n\n\n\n            # ожидание и реальность\n\n            path = '/search/?s=санкт'\n            expected = 'Санкт-Петербург'\n            resp = client.get(path)\n            self.assertEqual(expected, resp.get_data(True),\n                             msg=f'Неверный ответ при запросе к {path} должно быть {expected}')\n\n"
+              "text" : "from task import app\nfrom lesson.utils import SkyproTestCase\n\nclass TestCase(SkyproTestCase):\n\n    def get_key(self):\n        return \"375645\"\n\n\n    def test_sort(self):\n        with app.test_client() as client:\n\n            #  проверка статуса\n\n            path = '/search/?s=а'\n            expected = '...'\n            resp = client.get(path)\n            self.assertEqual(200, resp.status_code, msg=f'Приложение не обрабатывает запрос к {path}')\n\n\n            # ожидание и реальность\n\n            path = '/search/?s=мос'\n            expected = 'Москва'\n            resp = client.get(path)\n            self.assertEqual(expected, resp.get_data(True),\n                             msg=f'Неверный ответ при запросе к {path} должно быть {expected}')\n\n\n            # ожидание и реальность\n\n            path = '/search/?s=кра'\n            expected = 'Красноярск, Краснодар'\n            resp = client.get(path)\n            self.assertEqual(expected, resp.get_data(True),\n                             msg=f'Неверный ответ при запросе к {path} должно быть {expected}')\n\n\n\n            # ожидание и реальность\n\n            path = '/search/?s=санкт'\n            expected = 'Санкт-Петербург'\n            resp = client.get(path)\n            self.assertEqual(expected, resp.get_data(True),\n                             msg=f'Неверный ответ при запросе к {path} должно быть {expected}')\n\n"
             },
             "__init__.py" : {
               "name" : "__init__.py",
@@ -344,7 +344,7 @@
             }
           ],
           "isMultipleChoice" : true,
-          "name" : "another_port",
+          "name" : "another_port (key)",
           "files" : {
             "__init__.py" : {
               "name" : "__init__.py",
@@ -361,7 +361,7 @@
           "task_type" : "choice"
         },
         {
-          "name" : "find_user",
+          "name" : "find_user (key)",
           "files" : {
             "task.py" : {
               "name" : "task.py",
@@ -373,7 +373,7 @@
               "name" : "tests/test_task.py",
               "placeholders" : [ ],
               "is_visible" : false,
-              "text" : "from task import app\nfrom users import users\nimport unittest\n\nclass TestCase(unittest.TestCase):\n    def test_users(self):\n        with app.test_client() as client:\n            resp = client.get('/users/1/')\n            self.assertNotEqual(404, resp.status_code, msg='Представление должно работать по урлу /users/1/')\n\n            resp = client.get('/users/fsdfsd/')\n            self.assertEqual(404, resp.status_code,\n                             msg='Представление должно обрабатывать сегмент урла как целое число')\n\n            not_found_str = 'Не найдено'\n\n            for i in (0, 11, 20, 100, 1000):\n                resp = client.get(f'/users/{i}/')\n\n                self.assertEqual(404, resp.status_code,\n                                 msg=f'Если по индексу не найден пользователь, то код ответ должен быть 404')\n                self.assertEqual(not_found_str, resp.get_data(True),\n                                 msg=f'Если по индексу не найден пользователь, то ответ должен быть {not_found_str}')\n\n            for i, user in enumerate(users, start=1):\n                resp = client.get(f'/users/{i}/')\n                expected = f'{user[\"last_name\"]} {user[\"first_name\"]}'\n\n                self.assertEqual(200, resp.status_code,\n                                 msg=f'По индексу {i} должен возвращаться код ответа 200')\n                self.assertEqual(expected, resp.get_data(True),\n                                 msg=f'По индексу {i} должен возвращаться ответ {expected}')\n"
+              "text" : "from task import app\nfrom lesson.utils import SkyproTestCase\n\nclass TestCase(SkyproTestCase):\n\n    def get_key(self):\n        return \"173645\"\n\n\n    def test_users(self):\n        with app.test_client() as client:\n            resp = client.get('/users/1/')\n            self.assertNotEqual(404, resp.status_code, msg='Представление должно работать по урлу /users/1/')\n\n            resp = client.get('/users/fsdfsd/')\n            self.assertEqual(404, resp.status_code,\n                             msg='Представление должно обрабатывать сегмент урла как целое число')\n\n            not_found_str = 'Не найдено'\n\n            for i in (0, 11, 20, 100, 1000):\n                resp = client.get(f'/users/{i}/')\n\n                self.assertEqual(404, resp.status_code,\n                                 msg=f'Если по индексу не найден пользователь, то код ответ должен быть 404')\n                self.assertEqual(not_found_str, resp.get_data(True),\n                                 msg=f'Если по индексу не найден пользователь, то ответ должен быть {not_found_str}')\n\n            for i, user in enumerate(users, start=1):\n                resp = client.get(f'/users/{i}/')\n                expected = f'{user[\"last_name\"]} {user[\"first_name\"]}'\n\n                self.assertEqual(200, resp.status_code,\n                                 msg=f'По индексу {i} должен возвращаться код ответа 200')\n                self.assertEqual(expected, resp.get_data(True),\n                                 msg=f'По индексу {i} должен возвращаться ответ {expected}')\n"
             },
             "__init__.py" : {
               "name" : "__init__.py",
@@ -408,19 +408,19 @@
           "task_type" : "edu"
         },
         {
-          "name" : "dictionary",
+          "name" : "dictionary (key)",
           "files" : {
             "task.py" : {
               "name" : "task.py",
               "placeholders" : [ ],
               "is_visible" : true,
-              "text" : "from flask import Flask\n\napp = Flask(__name__)\n\nvocab = {\n    'cat': 'кошка',\n    'python': 'питон',\n    'flask': 'фляга',\n    'developer': 'разработчик',\n    'django': 'вофтпщ',\n    'framework': 'фреймворк',\n    'package': 'библиотека',\n    'library': 'библиотека',\n}\n\n\nif __name__ == '__main__':\n    app.run()\n"
+              "text" : "from flask import Flask\n\napp = Flask(__name__)\n\nvocab = {\n    'cat': 'кошка',\n    'python': 'питон',\n    'flask': 'фляга',\n    'developer': 'разработчик',\n    'django': 'вофтпщ',\n    'framework': 'фреймворк',\n    'package': 'библиотека',\n    'library': 'библиотека',\n}\n\n\n\nif __name__ == '__main__':\n    app.run()\n"
             },
             "tests/test_task.py" : {
               "name" : "tests/test_task.py",
               "placeholders" : [ ],
               "is_visible" : false,
-              "text" : "from task import app, vocab\nimport unittest\n\n\nclass TestCase(unittest.TestCase):\n    def test_index(self):\n        with app.test_client() as client:\n            for key, value in vocab.items():\n                resp = client.get(f'/{key}/')\n                expected = f'Значение для ключа {key} - {value}'\n\n                self.assertEqual(200, resp.status_code,\n                                 msg=f'Урл /{key}/ должен возвращать код ответа 200')\n                self.assertEqual(expected, resp.get_data(True),\n                                 msg=f'Урл /{key}/ должен возвращать \"{expected}\"')\n\n            resp = client.get(f'/not_vacab_value/')\n            expected = 'Ключ не найден'\n\n            self.assertEqual(404, resp.status_code,\n                             msg=f'Для значений не из словаря представление должно возвращать код ответа 404')\n            self.assertEqual(expected, resp.get_data(True),\n                             msg=f'Для значений не из словаря представление должно возвращать \"{expected}\"')\n"
+              "text" : "from task import app, vocab\nfrom lesson.utils import SkyproTestCase\n\nclass TestCase(SkyproTestCase):\n\n    def get_key(self):\n        return \"423304\"\n\n    def test_index(self):\n        with app.test_client() as client:\n            for key, value in vocab.items():\n                resp = client.get(f'/{key}/')\n                expected = f'Значение для ключа {key} - {value}'\n\n                self.assertEqual(200, resp.status_code,\n                                 msg=f'Урл /{key}/ должен возвращать код ответа 200')\n                self.assertEqual(expected, resp.get_data(True),\n                                 msg=f'Урл /{key}/ должен возвращать \"{expected}\"')\n\n            resp = client.get(f'/not_vacab_value/')\n            expected = 'Ключ не найден'\n\n            self.assertEqual(404, resp.status_code,\n                             msg=f'Для значений не из словаря представление должно возвращать код ответа 404')\n            self.assertEqual(expected, resp.get_data(True),\n                             msg=f'Для значений не из словаря представление должно возвращать \"{expected}\"')\n"
             },
             "__init__.py" : {
               "name" : "__init__.py",
@@ -432,6 +432,12 @@
               "name" : "tests/__init__.py",
               "placeholders" : [ ],
               "is_visible" : false,
+              "text" : ""
+            },
+            "solution.py" : {
+              "name" : "solution.py",
+              "placeholders" : [ ],
+              "is_visible" : true,
               "text" : ""
             }
           },
@@ -448,43 +454,19 @@
   ],
   "additional_files" : [
     {
-      "name" : "lesson1/task1/tests/__init__.py",
+      "name" : "lesson/utils.py",
+      "placeholders" : [ ],
+      "is_visible" : true,
+      "text" : "import unittest\n\nclass StatMixin:\n    def send_stat(self, result):\n        if result.wasSuccessful():\n            print(\"Задание выполнено! Ваш код:\",  self.get_key())\n\nclass SkyproTestCase(StatMixin, unittest.TestCase):\n    def run(self, *args, **kwargs):\n        result = super().run(*args, **kwargs)\n        self.send_stat(result)\n        return result\n"
+    },
+    {
+      "name" : "lesson/__init__.py",
       "placeholders" : [ ],
       "is_visible" : true,
       "text" : ""
     },
     {
-      "name" : "lesson1/task1/tests/test_task.py",
-      "placeholders" : [ ],
-      "is_visible" : true,
-      "text" : "import unittest\n\nfrom task import sum\n\n\n# todo: replace this with an actual test\nclass TestCase(unittest.TestCase):\n    def test_add(self):\n        self.assertEqual(sum(1, 2), 3, msg=\"adds 1 + 2 to equal 3\")\n"
-    },
-    {
-      "name" : "lesson1/task1/task.py",
-      "placeholders" : [ ],
-      "is_visible" : true,
-      "text" : "# todo: replace this with an actual task\ndef sum(a, b):\n    return a + b\n"
-    },
-    {
-      "name" : "lesson1/task1/__init__.py",
-      "placeholders" : [ ],
-      "is_visible" : true,
-      "text" : ""
-    },
-    {
-      "name" : "lesson1/utils.py",
-      "placeholders" : [ ],
-      "is_visible" : true,
-      "text" : "import unittest\n\n\nclass StatMixin:\n    def send_stat(self, result):\n        ok = result.wasSuccessful()\n        errors = result.errors\n        failures = result.failures\n\n        print('ok' if ok else 'not ok')\n        print('errors', errors)\n        print('failures', failures)\n\n\nclass SkyproTestCase(StatMixin, unittest.TestCase):\n    def run(self, *args, **kwargs):\n        result = super().run(*args, **kwargs)\n\n        self.send_stat(result)\n\n        return result\n"
-    },
-    {
-      "name" : "lesson1/__init__.py",
-      "placeholders" : [ ],
-      "is_visible" : true,
-      "text" : ""
-    },
-    {
-      "name" : "lesson1/requirements.txt",
+      "name" : "lesson/requirements.txt",
       "placeholders" : [ ],
       "is_visible" : true,
       "text" : "flask"

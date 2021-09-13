@@ -7,7 +7,7 @@ vocab = {
     'python': 'питон',
     'flask': 'фляга',
     'developer': 'разработчик',
-    'django': 'вофтпщ',
+    'django': 'джанго',
     'framework': 'фреймворк',
     'package': 'библиотека',
     'library': 'библиотека',

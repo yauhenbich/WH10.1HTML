@@ -6,7 +6,7 @@ content:
 - helloworld (key)
 - simple_multiroutes (key)
 - simple_operations (key)
-- simple_query (key)
-- another_port (key)
-- find_user (key)
+- simple_query
+- another_port
+- find_user
 - dictionary (key)
