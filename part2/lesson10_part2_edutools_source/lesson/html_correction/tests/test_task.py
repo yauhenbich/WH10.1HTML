@@ -2,10 +2,13 @@ from lesson.utils import SkyproTestCase
 
 from bs4 import BeautifulSoup
 
-def get_key(self):
-    return "155598"
 
 class TestCase(SkyproTestCase):
+
+    def get_key(self):
+        return "155598"
+
+
     def test_form(self):
         with open('form.html', 'r') as fh:
             soup = BeautifulSoup(fh.read(), "html.parser")
