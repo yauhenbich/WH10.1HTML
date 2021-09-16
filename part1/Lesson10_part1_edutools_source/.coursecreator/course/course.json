@@ -204,8 +204,8 @@
               "text" : ""
             }
           },
-          "description_text" : "<html>\n\n<h2>Задача \"Привет, мир\"</h2>\n\n<p>\n    Реализуйте минимальное приложение с одним представлением index, которое обрабатывает урл / и возвращает <i>Hello world</i>.\n</p>\n</html>\n",
-          "description_format" : "HTML",
+          "description_text" : "---\n---\n\n# Задача \"Привет, мир\"\n\nРеализуйте минимальное приложение с одним представлением index, которое обрабатывает урл / и возвращает <i>Hello world</i>.\n\n### Тесты проверят:\n\n* Запрос на / возвращает статус-код 200\n* Запрос на / возвращает тело ответа Hello world\n",
+          "description_format" : "MD",
           "feedback_link" : {
             "link_type" : "STEPIK"
           },
@@ -239,8 +239,8 @@
               "text" : "from flask import Flask, request\nimport json\n\napp = Flask(__name__)\n\n\ndef get_index():\n    return \"\", 200\n\ndef get_employees():\n    return \"\", 200\n\ndef get_employee(uid):\n    return \"\", 200\n\nif __name__ == '__main__':\n    app.run()\n\n"
             }
           },
-          "description_text" : "<h2>Задачка 1 (на мультироуты)</h2>\n\n<p>Создайте приложение, которое обрабатывало бы следующие маршруты:</p>\n\n<p>По маршруту <mark>&nbsp; / &nbsp;</mark> будет выведено <mark>&nbsp; Тут будет главная &nbsp;</mark></p>\n\n<p>По маршруту <mark>&nbsp; /employees/ &nbsp;</mark> будет выведено <mark>&nbsp;Тут будет информация о сотрудниках\n    &nbsp;</mark></p>\n\n<p>По маршруту <mark>&nbsp; /employees/(номер сотрудника) &nbsp;</mark> будет выведено <mark>&nbsp;Тут будет информация об одном из сотрудников    &nbsp;</mark></p>\n\n",
-          "description_format" : "HTML",
+          "description_text" : "## Задачка 1 (на мультироуты) \n\nСоздайте приложение, которое обрабатывает такие маршруты: \n\n* По маршруту  `/`   будет вывести \n`Тут будет главная`\n\n* По маршруту `/employees/` вывести \n`Тут будет информация о сотрудниках`\n\n* По маршруту `/` employees/(номер сотрудника) вывести `Тут будет информация об одном из сотрудников` \n\n### Тесты проверят:\n\n* Запрос на / возвращает статус-код 200\n* Запрос на /employees/ возвращает статус-код 200\n* Запрос на /employees/3/ возвращает статус-код 200\n\n* Запрос на / возвращает тело ответа `Тут будет главная`\n\n",
+          "description_format" : "MD",
           "feedback_link" : {
             "link_type" : "STEPIK"
           },
@@ -274,15 +274,15 @@
               "text" : ""
             }
           },
-          "description_text" : "<html>\n\n<h2>Задачка 2 (на мультироуты с данными)</h2>\n\n<p>У вас есть список трат за определенный день. Список хранится так:</p>\n<mark> expenses = [1240, 60, 230, 20, 310] </mark>\n\n<p>Напишите приложение со специальными представлениями для трат.</p>\n\n<hr>\n\n<p><mark> /all </mark> Вывводит все траты через пробел, например</p>\n<mark> 1240 60 230 20 310</mark>\n\n<hr>\n\n<p> <mark> /max </mark> Выводит самую крупную трату, например <mark> 1240 </mark></p>\n\n<hr>\n\n<p><mark>/min</mark> Выводит самую мелкую трату, например <mark>20</mark></p>\n\n\n<hr>\n<p><mark>/avg </mark> Вывести среднюю трату, например <mark>372</mark></p>\n\n</html>\n",
-          "description_format" : "HTML",
+          "description_text" : "# Задачка 2 (на мультироуты с данными)\n\nУ вас есть список трат за определенный день. Список хранится так:\n\n`expenses = [1240, 60, 230, 20, 310] `\n\nНапишите приложение со специальными представлениями для трат.\n\n### Как работают тесты\n\n`/all` Вывводит все траты через пробел, например\n\n`1240 60 230 20 310`\n\n` /max ` Выводит самую крупную трату, например `1240`\n\n` /min ` Выводит самую мелкую трату, например `20`\n\n\n` /avg ` Вывести среднюю трату, например  `372`\n\n",
+          "description_format" : "MD",
           "feedback_link" : {
             "link_type" : "STEPIK"
           },
           "task_type" : "edu"
         },
         {
-          "name" : "simple_query (key)",
+          "name" : "simple_query",
           "files" : {
             "tests/test_task.py" : {
               "name" : "tests/test_task.py",
@@ -309,8 +309,8 @@
               "text" : "from flask import Flask, request\napp = Flask(__name__)\n\nlocations = [\n    \"Москва\",\n    \"Санкт-Петербург\",\n    \"Новосибирск\",\n    \"Екатеринбург\",\n    \"Казань\",\n    \"Нижний Новгород\",\n    \"Челябинск\",\n    \"Самара\",\n    \"Омск\",\n    \"Ростов-на-Дону\",\n    \"Уфа\",\n    \"Красноярск\",\n    \"Воронеж\",\n    \"Пермь\",\n    \"Волгоград\",\n    \"Краснодар\",\n    \"Волгоград\",\n    \"Саратов\",\n    \"Тюмень\",\n    \"Тольятти\",\n    \"Ижевск\",\n]\n\n\ndef get_cities():\n    ...\n\nif __name__ == '__main__':\n    app.run()\n"
             }
           },
-          "description_text" : "<html>\n\n<h2>Задачка 3 (на квери параметры)</h2>\n\n<p>Вам предоставлен список городов. Выполните поиск когда пользователь запрашивает URL типа</p>\n\n<p> <mark>/search/?s=са</mark></p>\n\nФормат ответа – через запятую. Например:\n\n<p> <mark>Санкт-Петербург, Саратов</mark></p>\n\nЕсли городов не найдено – вывести\n\n<p> <mark>Городов не найдено</mark></p>\n",
-          "description_format" : "HTML",
+          "description_text" : "# Задачка 3 (на квери параметры)\n------------------------------\n\nВам предоставлен список городов. Выполните поиск когда пользователь запрашивает URL типа\n\n`/search/?s=са`\n\nФормат ответа – через запятую. Например:\n\n`Санкт-Петербург, Саратов`\n\nЕсли городов не найдено – вывести\n\n`Городов не найдено`\n\n### Как тестируются ответы:\n\nПриложение обрабатывает запрос к  `/search/?s=...`\n\nЗапрос к `/search/?s=мос` возвращает `Москва`\n\nЗапрос к `/search/?s=кра` возвращает `Красноярск, Краснодар`\n\nЗапрос к `/search/?s=санкт` возвращает `Санкт-Петербург`\n",
+          "description_format" : "MD",
           "feedback_link" : {
             "link_type" : "STEPIK"
           },
@@ -344,7 +344,7 @@
             }
           ],
           "isMultipleChoice" : true,
-          "name" : "another_port (key)",
+          "name" : "another_port",
           "files" : {
             "__init__.py" : {
               "name" : "__init__.py",
@@ -361,19 +361,19 @@
           "task_type" : "choice"
         },
         {
-          "name" : "find_user (key)",
+          "name" : "find_user",
           "files" : {
             "task.py" : {
               "name" : "task.py",
               "placeholders" : [ ],
               "is_visible" : true,
-              "text" : "from flask import Flask\n\napp = Flask(__name__)\n\n\ndef load_users():\n    from part1.task8.users import users\n    return users\n\n\n# TODO добавить маршрут для получения целочисленного индекса из сегмента урл\n\ndef get_user(idx):\n    users = load_users()\n\n    if idx < 1 or idx > len(users):\n        return ''  # TODO вернуть 404 код ответа и строку 'Не найдено'\n\n    return f''  # TODO вернуть фамилию и имя пользователя с индексом idx - 1\n\n\nif __name__ == '__main__':\n    app.run()\n"
+              "text" : "from flask import Flask\n\napp = Flask(__name__)\n\n\ndef load_users():\n    from users import users\n    return users\n\n\n@app.route('/users/<int:idx>/')\ndef get_user(idx):\n    users = load_users()\n    if idx < 1 or idx > len(users):\n        return 'Не найдено', 404\n    user = users[idx-1]\n    return f\"{user['last_name']} {user['first_name']}\"\n\n\nif __name__ == '__main__':\n    app.run()\n"
             },
             "tests/test_task.py" : {
               "name" : "tests/test_task.py",
               "placeholders" : [ ],
               "is_visible" : false,
-              "text" : "from task import app\nfrom lesson.utils import SkyproTestCase\n\nclass TestCase(SkyproTestCase):\n\n    def get_key(self):\n        return \"173645\"\n\n\n    def test_users(self):\n        with app.test_client() as client:\n            resp = client.get('/users/1/')\n            self.assertNotEqual(404, resp.status_code, msg='Представление должно работать по урлу /users/1/')\n\n            resp = client.get('/users/fsdfsd/')\n            self.assertEqual(404, resp.status_code,\n                             msg='Представление должно обрабатывать сегмент урла как целое число')\n\n            not_found_str = 'Не найдено'\n\n            for i in (0, 11, 20, 100, 1000):\n                resp = client.get(f'/users/{i}/')\n\n                self.assertEqual(404, resp.status_code,\n                                 msg=f'Если по индексу не найден пользователь, то код ответ должен быть 404')\n                self.assertEqual(not_found_str, resp.get_data(True),\n                                 msg=f'Если по индексу не найден пользователь, то ответ должен быть {not_found_str}')\n\n            for i, user in enumerate(users, start=1):\n                resp = client.get(f'/users/{i}/')\n                expected = f'{user[\"last_name\"]} {user[\"first_name\"]}'\n\n                self.assertEqual(200, resp.status_code,\n                                 msg=f'По индексу {i} должен возвращаться код ответа 200')\n                self.assertEqual(expected, resp.get_data(True),\n                                 msg=f'По индексу {i} должен возвращаться ответ {expected}')\n"
+              "text" : "from task import app, load_users\nfrom lesson.utils import SkyproTestCase\n\nusers = load_users()\n\nclass TestCase(SkyproTestCase):\n\n    def get_key(self):\n        return \"173645\"\n\n    def test_users(self):\n        with app.test_client() as client:\n            resp = client.get('/users/1/')\n            self.assertNotEqual(404, resp.status_code, msg='Представление должно работать по урлу /users/1/')\n\n            resp = client.get('/users/fsdfsd/')\n            self.assertEqual(404, resp.status_code,\n                             msg='Представление должно обрабатывать сегмент урла как целое число')\n\n            not_found_str = 'Не найдено'\n\n            for i in (0, 11, 20, 100, 1000):\n                resp = client.get(f'/users/{i}/')\n\n                self.assertEqual(404, resp.status_code,\n                                 msg=f'Если по индексу не найден пользователь, то код ответ должен быть 404')\n                self.assertEqual(not_found_str, resp.get_data(True),\n                                 msg=f'Если по индексу не найден пользователь, то ответ должен быть {not_found_str}')\n\n            for i, user in enumerate(users, start=1):\n                resp = client.get(f'/users/{i}/')\n                expected = f'{user[\"last_name\"]} {user[\"first_name\"]}'\n\n                self.assertEqual(200, resp.status_code,\n                                 msg=f'По индексу {i} должен возвращаться код ответа 200')\n                self.assertEqual(expected, resp.get_data(True),\n                                 msg=f'По индексу {i} должен возвращаться ответ {expected}')\n"
             },
             "__init__.py" : {
               "name" : "__init__.py",
@@ -397,11 +397,11 @@
               "name" : "solution.py",
               "placeholders" : [ ],
               "is_visible" : false,
-              "text" : ""
+              "text" : "from flask import Flask\n\napp = Flask(__name__)\n\n\ndef load_users():\n    from users import users\n    return users\n\n@app.route(\"/users/<int:uid>/\")\ndef get_user(uid):\n    users = load_users()\n\n    if uid < 1 or uid > len(users):\n        return 'Не найдено', 404\n\n    requested_user = users[uid-1]\n    return f'{requested_user[\"last_name\"]} {requested_user[\"first_name\"]}'\n\nif __name__ == '__main__':\n    app.run()\n"
             }
           },
-          "description_text" : "<html>\n\n<h2>Задача \"Поиск пользователя\"</h2>\n\n<p>\n    Программисту Гарри поставили задачу реализовать приложение, которое\n    <ol>\n        <li>Читает из users.py список пользователей.</li>\n        <li>Возвращает по урлу /users/&lt;index&gt;/ строку с фамилией и именем пользователя через пробел\n            по индексу из списка пользователей.\n            <br>\n            Например, по урлу /users/1/ вернется строка <i>Wong Gordon</i></li>\n        <li>Если такого индекса нет в списке, то приложение должно возвращать строку 'Не найдено' и код ответа 404.</li>\n        <li>Индексы должны начинаться с 1, а не с 0, как в списках Python</li>\n    </ol>\n\n    Гарри трудился всю ночь, чтобы успеть к утреннему дедлайну, но уснул и не дописал часть кода. К счастью,\n    ты пришел в офис пораньше и можешь помочь ему закончить начатую работу вовремя.\n    <br>\n    <br>\n    Заполни все TODO и реализуй до конца представление <b>get_user</b>.\n</p>\n</html>\n",
-          "description_format" : "HTML",
+          "description_text" : "# Задача \"Поиск пользователя\"\n\nПрограммисту Гарри поставили задачу реализовать приложение, которое\n\nЧитает из `users.py` список пользователей.\n\nВозвращает по урлу `/users/<index>/` строку с фамилией и именем пользователя через пробел по индексу из списка пользователей.\n\nНапример, по урлу `/users/1/` вернется строка `Wong Gordon`\n\nЕсли такого индекса нет в списке, то приложение должно возвращать строку 'Не найдено' и код ответа 404.\n\nИндексы должны начинаться с 1, а не с 0, как в списках Python\n\nГарри трудился всю ночь, чтобы успеть к утреннему дедлайну, но уснул и не дописал часть кода. К счастью,\nты пришел в офис пораньше и можешь помочь ему закончить начатую работу вовремя.\n\nЗаполни все TODO и реализуй до конца представление `get_user`.\n\n### Тесты проверят:\n\nПредставление должно работать по урлу /users/1/\n\nПредставление должно обрабатывать сегмент урла как целое число\n\nПри запросах к `/users/0` `/users/11` `/users/20` `/users/100` `/users/1000` ответ должен содержать статус 404\n\nПри запросах к `/users/ааа` ответ должен содержать статус 404\n\nПри запросах к `/users/1` должно возвращаться `Wong Gordon`\n\nПри запросах к `/users/2` должно возвращаться `Blankenship Church`\n",
+          "description_format" : "MD",
           "feedback_link" : {
             "link_type" : "STEPIK"
           },
@@ -414,7 +414,7 @@
               "name" : "task.py",
               "placeholders" : [ ],
               "is_visible" : true,
-              "text" : "from flask import Flask\n\napp = Flask(__name__)\n\nvocab = {\n    'cat': 'кошка',\n    'python': 'питон',\n    'flask': 'фляга',\n    'developer': 'разработчик',\n    'django': 'вофтпщ',\n    'framework': 'фреймворк',\n    'package': 'библиотека',\n    'library': 'библиотека',\n}\n\n\n\nif __name__ == '__main__':\n    app.run()\n"
+              "text" : "from flask import Flask\n\napp = Flask(__name__)\n\nvocab = {\n    'cat': 'кошка',\n    'python': 'питон',\n    'flask': 'фляга',\n    'developer': 'разработчик',\n    'django': 'джанго',\n    'framework': 'фреймворк',\n    'package': 'библиотека',\n    'library': 'библиотека',\n}\n\n@app.route(\"/<key>/\")\ndef translate(key):\n    value = vocab.get(key, False)\n    if value:\n        return f\"Значение для ключа {key} - {value}\"\n    return \"Ключ не найден\", 404\n\n\nif __name__ == '__main__':\n    app.run()\n"
             },
             "tests/test_task.py" : {
               "name" : "tests/test_task.py",
@@ -441,8 +441,8 @@
               "text" : ""
             }
           },
-          "description_text" : "<html>\n\n<h2>Задача \"Словарь\"</h2>\n\n<p>\n    Дан словарь <i>vocab</i>. Нужно реализовать приложение, которое выполняет поиск по ключу в этом словаре.\n    <br>\n    <br>\n    Напишите представление, которое берет из урла текстовый сегмент, ищет по полученному значению сегмента ключ в\n    словаре vocab и возвращает <i>Значение для ключа &lt;значение переданного ключа&gt; - &lt;найденное по этому ключу значение в словаре&gt;</i>.\n    <br>\n    <br>\n    Если такого ключа нет в словаре, то возвращает строку \"Ключ не найден\" и код ответа 404.\n    <br>\n    <br>\n    Например, по урлу /cat/ приложение ответит \"Значение для ключа cat - кошка\".\n</p>\n</html>\n",
-          "description_format" : "HTML",
+          "description_text" : "# Задача \"Словарь\"\n\nДан словарь `vocab`. Нужно реализовать приложение, которое выполняет поиск по ключу в этом словаре.\n\nНапишите представление, которое берет из урла текстовый сегмент, ищет по полученному значению сегмента ключ в\nсловаре `vocab` и возвращает <i>Значение для ключа &lt;значение переданного ключа&gt; - &lt;найденное по этому ключу значение в словаре&gt;</i>.\n\nЕсли такого ключа нет в словаре, то возвращает строку \"Ключ не найден\" и код ответа 404.\n\n### Тесты проверят:\n\nПри запросе `/cat` приложение ответит `Значение для ключа cat - кошка`\n\nПри запросе `/flask` приложение ответит `Значение для ключа flask - фляга`\n\nПри запросе `/python` приложение ответит `Значение для ключа python - питон`\n",
+          "description_format" : "MD",
           "feedback_link" : {
             "link_type" : "STEPIK"
           },

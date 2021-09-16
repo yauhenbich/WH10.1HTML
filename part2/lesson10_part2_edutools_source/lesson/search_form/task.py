@@ -3,16 +3,17 @@ from flask import Flask, request
 app = Flask(__name__)
 
 
-@app.route()
+@app.route('/search/', methods=['GET'])
 def draw_form():
     return '<!doctype html>' \
            '<html lang="ru">' \
            '<form method="post"><input type="text" name="search"><input type="submit"></form>'
 
 
-@app.route()
+@app.route('/search/', methods=['POST'])
 def process_form():
-    return 'Результаты по запросу <i> ... </i>'
+    search = request.form['search']
+    return f'<h1>Результаты по запросу <i>{search}</i></h1>'
 
 
 if __name__ == '__main__':
