@@ -367,7 +367,7 @@
               "name" : "task.py",
               "placeholders" : [ ],
               "is_visible" : true,
-              "text" : "from flask import Flask\n\napp = Flask(__name__)\n\n\ndef load_users():\n    from users import users\n    return users\n\n\n@app.route('/users/<int:idx>/')\ndef get_user(idx):\n    users = load_users()\n    if idx < 1 or idx > len(users):\n        return 'Не найдено', 404\n    user = users[idx-1]\n    return f\"{user['last_name']} {user['first_name']}\"\n\n\nif __name__ == '__main__':\n    app.run()\n"
+              "text" : "from flask import Flask\n\napp = Flask(__name__)\n\n\ndef load_users():\n    from users import users\n    return users\n\n\n\n\nif __name__ == '__main__':\n    app.run()\n"
             },
             "tests/test_task.py" : {
               "name" : "tests/test_task.py",
